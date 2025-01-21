@@ -12,6 +12,7 @@
     </owl:Ontology>
     
 
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -363,6 +364,7 @@
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Airlock">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <adjacentTo rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Sheriffs_Office"/>
         <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel01"/>
         <rdfs:label>Silo Airlock</rdfs:label>
         <extractedSentence>His office, situated between the cafeteria and the silo’s airlock. (Part 1, Holston 1)</extractedSentence>
@@ -505,6 +507,24 @@
     
 
 
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Deputy_Station_Down_Deep -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Deputy_Station_Down_Deep">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel120"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Deputy_Station_Mids -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Deputy_Station_Mids">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel72"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Donald -->
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Donald">
@@ -621,6 +641,15 @@
     
 
 
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Garment_District -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Garment_District">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel14"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#GeneratorRealignment -->
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#GeneratorRealignment">
@@ -658,6 +687,30 @@
     
 
 
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Gloria -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Gloria"/>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Glorias_Apartment -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Glorias_Apartment">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel05"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Grade_School_for_the_Upper_Third -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Grade_School_for_the_Upper_Third">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel19"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Hills -->
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Hills">
@@ -673,6 +726,7 @@
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#HoldingCell">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <adjacentTo rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Sheriffs_Office"/>
         <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel01"/>
         <rdfs:label>Holding Cell</rdfs:label>
         <extractedSentence>Get the mayor. Tell her I want to go outside. (Holston in the holding cell, Part 1, Holston 1)</extractedSentence>
@@ -785,6 +839,7 @@
         <childOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#DrNichols"/>
         <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#DownDeep"/>
         <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel140"/>
+        <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Up_Top"/>
         <worksIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#GeneratorRoom"/>
         <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">33</hasAge>
         <hasGivenName>Juliette</hasGivenName>
@@ -797,6 +852,15 @@
         <extractedSentence>Now stationed at the up top as Sheriff, investigating Mayor Jahns&apos;s death, 
     pondering Holston&apos;s final decision, realigning the generator in Mechanical, 
     and grappling with new political pressures. (Ch. 15–19)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Juliette_Nichols_Apartment -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Juliette_Nichols_Apartment">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel04"/>
     </owl:NamedIndividual>
     
 
@@ -831,6 +895,7 @@
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Lukas">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Up_Top"/>
         <hasAge>Adult</hasAge>
         <hasRole>IT Worker</hasRole>
         <hasSex>Male</hasSex>
@@ -883,6 +948,15 @@ ending with her tragic death. (Ch. 15–16)</extractedSentence>
         <mentionedInChapter>15</mentionedInChapter>
         <rdfs:comment>Cot used by Marnes, behind bars in the mid-level station. (Ch. 15)</rdfs:comment>
         <rdfs:label>Marnes’s Cot in Holding Cell</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Marnes_Apartment -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Marnes_Apartment">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel05"/>
     </owl:NamedIndividual>
     
 
@@ -955,6 +1029,14 @@ Embarks on final climb, dies at nursery from a poison-laced canteen. (Ch. 15–1
         <rdfs:comment>Deputy station located in the mid-level floors, around 50–60. (Ch. 15)</rdfs:comment>
         <rdfs:label>Mid-level Deputy Station</rdfs:label>
         <extractedSentence>Where Jahns and Marnes stay while climbing up, located around the mid floors. (Ch. 15)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Mids -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Mids">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
     </owl:NamedIndividual>
     
 
@@ -1101,6 +1183,16 @@ Embarks on final climb, dies at nursery from a poison-laced canteen. (Ch. 15–1
     
 
 
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Sheriffs_Office -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Sheriffs_Office">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <adjacentTo rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Cafeteria"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel01"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Shirly -->
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Shirly">
@@ -1132,6 +1224,7 @@ Embarks on final climb, dies at nursery from a poison-laced canteen. (Ch. 15–1
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel01">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
         <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Up_Top"/>
         <rdfs:label>Silo Level 1 (Top)</rdfs:label>
         <extractedSentence>The top of the spiral stairway... the widest rooms of the entire silo complex: the cafeteria and adjoining lounge (Part 1, Holston 1)</extractedSentence>
     </owl:NamedIndividual>
@@ -1713,6 +1806,7 @@ Embarks on final climb, dies at nursery from a poison-laced canteen. (Ch. 15–1
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel144">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#DownDeep"/>
         <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
         <rdfs:label>Silo Level 144</rdfs:label>
     </owl:NamedIndividual>
@@ -2055,6 +2149,7 @@ Embarks on final climb, dies at nursery from a poison-laced canteen. (Ch. 15–1
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel48">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
         <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Up_Top"/>
         <rdfs:label>Silo Level 48</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2064,6 +2159,7 @@ Embarks on final climb, dies at nursery from a poison-laced canteen. (Ch. 15–1
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel49">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Mids"/>
         <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
         <rdfs:label>Silo Level 49</rdfs:label>
     </owl:NamedIndividual>
@@ -2154,7 +2250,6 @@ Embarks on final climb, dies at nursery from a poison-laced canteen. (Ch. 15–1
         <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
         <rdfs:comment>Mentioned in Ch. 15, where a young girl is reading a children’s book in the dim light.</rdfs:comment>
         <rdfs:label>Silo Level 57</rdfs:label>
-        <rdfs:label>Silo Level 57 (Landing 57)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2545,6 +2640,7 @@ Embarks on final climb, dies at nursery from a poison-laced canteen. (Ch. 15–1
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel96">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Mids"/>
         <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
         <rdfs:label>Silo Level 96</rdfs:label>
     </owl:NamedIndividual>
@@ -2555,6 +2651,7 @@ Embarks on final climb, dies at nursery from a poison-laced canteen. (Ch. 15–1
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel97">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#DownDeep"/>
         <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
         <rdfs:label>Silo Level 97</rdfs:label>
     </owl:NamedIndividual>
@@ -2631,6 +2728,32 @@ Embarks on final climb, dies at nursery from a poison-laced canteen. (Ch. 15–1
         <occursInLocation rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel140"/>
         <rdfs:label>Tape Requisition Incident</rdfs:label>
         <extractedSentence>Juliette intercepting heat tape bound for IT, using it to fix a heat exchanger. (Section 13)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#The_Bazaar -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#The_Bazaar">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Up_Top -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Up_Top">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Upper_Water_Treatment_Plant -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Upper_Water_Treatment_Plant">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel32"/>
     </owl:NamedIndividual>
     
 
