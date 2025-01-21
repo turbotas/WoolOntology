@@ -22,7 +22,8 @@ You can open or edit the `.rdf` files in any text editor, but for a more semanti
 1. **Protégé** – A free and popular ontology editor.  
    - Download from [https://protege.stanford.edu/](https://protege.stanford.edu/)  
    - File → Open → select your `.rdf` file.  
-   - Configure “Show imported ontologies” if relevant.  
+   - Configure “Show imported ontologies” if relevant.
+   - You can also open the file in Protege direct using the URL https://raw.githubusercontent.com/turbotas/WoolOntology/refs/heads/main/Wool.rdf but obviously no edits will be saved!
 
 2. **Visual RDF Tools** – E.g., **VOWL** or **GraphDB**.  
    - Some let you visualize classes/properties as a graph.
