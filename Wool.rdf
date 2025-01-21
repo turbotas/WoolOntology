@@ -1,0 +1,2654 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#"
+     xml:base="https://www.turbotas.co.uk/WoolOntology/Wool.rdf"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf">
+        <rdfs:comment>An ontology capturing key elements from Hugh Howey&apos;s &apos;Wool&apos; excerpt provided by the user.</rdfs:comment>
+        <rdfs:label>Wool Ontology (Characters, Silo Locations, Events)</rdfs:label>
+    </owl:Ontology>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#symmetricProperty -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#symmetricProperty"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#transitiveProperty -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#transitiveProperty"/>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#extractedSentence -->
+
+    <owl:AnnotationProperty rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#extractedSentence">
+        <rdfs:comment>Stores the exact or paraphrased snippet of text from which we derived the statement or entity.</rdfs:comment>
+        <rdfs:label>extractedSentence</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#adjacentTo -->
+
+    <owl:ObjectProperty rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#adjacentTo">
+        <rdfs:domain rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <rdfs:range rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <rdfs:comment>Locations that are physically next to each other (e.g., cafeteria and lounge).</rdfs:comment>
+        <rdfs:label>adjacent to</rdfs:label>
+        <owl:symmetricProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:symmetricProperty>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#childOf -->
+
+    <owl:ObjectProperty rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#childOf">
+        <owl:inverseOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#parentOf"/>
+        <rdfs:domain rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <rdfs:range rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <rdfs:label>child of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#hasOwner -->
+
+    <owl:ObjectProperty rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#hasOwner">
+        <rdfs:domain rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#PhysicalObject"/>
+        <rdfs:range rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <rdfs:comment>Links a physical object to the person who currently owns or possesses it.</rdfs:comment>
+        <rdfs:label>has owner</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#marriedTo -->
+
+    <owl:ObjectProperty rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#marriedTo">
+        <rdfs:domain rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <rdfs:range rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <rdfs:comment>Symmetric relationship linking spouses.</rdfs:comment>
+        <rdfs:label>married to</rdfs:label>
+        <owl:symmetricProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:symmetricProperty>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#memberOf -->
+
+    <owl:ObjectProperty rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#memberOf">
+        <rdfs:domain rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <rdfs:range rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <rdfs:comment>Indicates membership or close affiliation with a group or place (e.g., Mechanical department).</rdfs:comment>
+        <rdfs:label>member of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#occursInLocation -->
+
+    <owl:ObjectProperty rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#occursInLocation">
+        <rdfs:domain rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
+        <rdfs:range rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <rdfs:comment>Links an event to a location where it happens.</rdfs:comment>
+        <rdfs:label>occurs in location</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#parentOf -->
+
+    <owl:ObjectProperty rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#parentOf">
+        <rdfs:domain rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <rdfs:range rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <rdfs:comment>Indicates a parent-child relationship.</rdfs:comment>
+        <rdfs:label>parent of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#partOf -->
+
+    <owl:ObjectProperty rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#partOf">
+        <rdfs:domain rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <rdfs:range rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <rdfs:comment>Indicates a smaller location belongs to a larger one.</rdfs:comment>
+        <rdfs:label>part of</rdfs:label>
+        <owl:transitiveProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:transitiveProperty>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#participatesIn -->
+
+    <owl:ObjectProperty rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#participatesIn">
+        <rdfs:domain rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <rdfs:range rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
+        <rdfs:comment>Links a person to an event they take part in.</rdfs:comment>
+        <rdfs:label>participates in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#shadowOf -->
+
+    <owl:ObjectProperty rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#shadowOf">
+        <rdfs:domain rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <rdfs:range rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <rdfs:comment>A person is the &apos;shadow&apos; (apprentice/trainee) of another person.</rdfs:comment>
+        <rdfs:label>shadow of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#worksIn -->
+
+    <owl:ObjectProperty rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#worksIn">
+        <rdfs:domain rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <rdfs:range rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <rdfs:comment>Indicates a person&apos;s primary workplace.</rdfs:comment>
+        <rdfs:label>works in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#hasAge -->
+
+    <owl:DatatypeProperty rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#hasAge">
+        <rdfs:domain rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Approximate age or stage of life (Child, Adult, etc.).</rdfs:comment>
+        <rdfs:label>has age</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#hasGivenName -->
+
+    <owl:DatatypeProperty rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#hasGivenName">
+        <rdfs:domain rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>has given name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#hasRole -->
+
+    <owl:DatatypeProperty rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#hasRole">
+        <rdfs:domain rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Occupation or recognized status (Sheriff, Mayor, Nurse, etc.).</rdfs:comment>
+        <rdfs:label>has role</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#hasSex -->
+
+    <owl:DatatypeProperty rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#hasSex">
+        <rdfs:domain rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Biological sex or gender of the person, if known.</rdfs:comment>
+        <rdfs:label>has sex</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#hasStatus -->
+
+    <owl:DatatypeProperty rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#hasStatus">
+        <rdfs:domain rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Alive, Deceased, or similar.</rdfs:comment>
+        <rdfs:label>has status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#hasSurname -->
+
+    <owl:DatatypeProperty rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#hasSurname">
+        <rdfs:domain rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>has surname</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#mentionedInChapter -->
+
+    <owl:DatatypeProperty rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#mentionedInChapter">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Quick reference to the chapters or sections where an entity is mentioned.</rdfs:comment>
+        <rdfs:label>mentioned in chapter</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/WoolAggregated#has_nickname -->
+
+    <owl:DatatypeProperty rdf:about="https://www.turbotas.co.uk/WoolOntology/WoolAggregated#has_nickname">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Document -->
+
+    <owl:Class rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Document">
+        <rdfs:comment>Paper files, case folders, books, etc.</rdfs:comment>
+        <rdfs:label>Document</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event -->
+
+    <owl:Class rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event">
+        <rdfs:comment>Key happenings or actions in the story (e.g., Holston&apos;s climb, a cleaning, etc.).</rdfs:comment>
+        <rdfs:label>Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location -->
+
+    <owl:Class rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location">
+        <rdfs:comment>Any place, area, or region (Silo, outside, floors, rooms, etc.).</rdfs:comment>
+        <rdfs:label>Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Machine -->
+
+    <owl:Class rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Machine">
+        <rdfs:comment>Any large mechanical device (pumps, generators, etc.).</rdfs:comment>
+        <rdfs:label>Machine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person -->
+
+    <owl:Class rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person">
+        <rdfs:comment>Any major or minor character from the text.</rdfs:comment>
+        <rdfs:label>Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#PhysicalObject -->
+
+    <owl:Class rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#PhysicalObject">
+        <rdfs:comment>Any tangible item (tools, furniture, containers).</rdfs:comment>
+        <rdfs:label>Physical Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel -->
+
+    <owl:Class rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel">
+        <rdfs:subClassOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <rdfs:comment>One specific floor/level of the silo structure.</rdfs:comment>
+        <rdfs:label>Silo Level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Airlock -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Airlock">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel01"/>
+        <rdfs:label>Silo Airlock</rdfs:label>
+        <extractedSentence>His office, situated between the cafeteria and the silo’s airlock. (Part 1, Holston 1)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#AllisonCleaning -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#AllisonCleaning">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
+        <occursInLocation rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Outside"/>
+        <rdfs:label>Allison&apos;s Cleaning</rdfs:label>
+        <extractedSentence>Holston remembered watching his wife go about her cleaning three years ago. (Part 1, Holston 2-3)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Allison_Holston -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Allison_Holston">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <marriedTo rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Holston"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#AllisonCleaning"/>
+        <hasAge>Adult</hasAge>
+        <hasGivenName>Allison</hasGivenName>
+        <hasRole>Holston&apos;s Wife</hasRole>
+        <hasSex>Female</hasSex>
+        <hasStatus>Deceased</hasStatus>
+        <hasSurname>Holston</hasSurname>
+        <extractedSentence>Holston&apos;s wife, who went outside 3 years earlier after exclaiming her desire to leave. (Part 1, Holston 3-5)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#BernardConfrontation -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#BernardConfrontation">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
+        <occursInLocation rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#HoldingCell"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Bernard_Holland"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Juliette_Nichols"/>
+        <rdfs:label>Bernard’s Confrontation with Juliette</rdfs:label>
+        <extractedSentence>Bernard visits Juliette in the holding cell, 
+    demands updates, insinuates no foul play in Jahns&apos;s death. (Ch. 19)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Bernard_Holland -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Bernard_Holland">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <hasAge>Adult</hasAge>
+        <hasGivenName>Bernard</hasGivenName>
+        <hasRole>Acting Mayor</hasRole>
+        <hasRole>Head of IT</hasRole>
+        <hasSex>Male</hasSex>
+        <hasStatus>Alive</hasStatus>
+        <hasSurname>Holland</hasSurname>
+        <rdfs:label>Bernard Holland</rdfs:label>
+        <extractedSentence>Rises to acting mayor after Jahns&apos;s death, 
+    suspected by Marnes and Juliette of foul play, 
+    exerts heavy political control. (Ch. 15–19)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#BunkhouseMechanical -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#BunkhouseMechanical">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel140"/>
+        <rdfs:label>Bunkhouse in Mechanical</rdfs:label>
+        <extractedSentence>Sleeping area for visiting workers or guests in Mechanical. (Section 14)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Cafeteria -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Cafeteria">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel01"/>
+        <rdfs:label>Cafeteria</rdfs:label>
+        <extractedSentence>The cafeteria and the adjoining lounge... level with him now. (Part 1, Holston 1)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#ChildrensBookFloor57 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#ChildrensBookFloor57">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Document"/>
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#PhysicalObject"/>
+        <mentionedInChapter>15</mentionedInChapter>
+        <rdfs:comment>A plastic-covered children’s book read by a young girl on stairwell landing 57. (Ch. 15)</rdfs:comment>
+        <rdfs:label>Child’s Book at Floor 57</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Clarke -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Clarke">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <hasAge>Adult</hasAge>
+        <hasGivenName>Clarke</hasGivenName>
+        <hasRole>Emma&apos;s Husband / Cafeteria Helper</hasRole>
+        <hasSex>Male</hasSex>
+        <hasStatus>Alive</hasStatus>
+        <hasSurname>Unknown</hasSurname>
+        <extractedSentence>Her husband, Clarke, sat behind a table with cups of juice and cookies. (Part 1, Holston 1)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#ConversationKnox -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#ConversationKnox">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
+        <occursInLocation rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel140"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Knox"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Marnes"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#MayorJahns"/>
+        <rdfs:label>Knox Meeting</rdfs:label>
+        <extractedSentence>Mayor Jahns and Marnes meet Knox briefly before following the orange-haired shadow. (Section 10)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#ConvertibleCouch -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#ConvertibleCouch">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#PhysicalObject"/>
+        <mentionedInChapter>15</mentionedInChapter>
+        <rdfs:comment>Where Mayor Jahns slept; described as borrowed linens, 2-chit soap smell. (Ch. 15)</rdfs:comment>
+        <rdfs:label>Convertible Couch (Mid-level Deputy Station)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Donald -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Donald">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <hasAge>Unknown</hasAge>
+        <hasRole>Deceased Husband of Mayor Jahns</hasRole>
+        <hasSex>Male</hasSex>
+        <hasStatus>Deceased (long ago)</hasStatus>
+        <rdfs:label>Donald</rdfs:label>
+        <extractedSentence>Mentioned as Jahns’s late husband, fueling her grief and decisions. (Ch. 15–16)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#DownDeep -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#DownDeep">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <rdfs:comment>General label for the lower 1/3 of the silo.</rdfs:comment>
+        <rdfs:label>Down Deep</rdfs:label>
+        <extractedSentence>The bottom third of the silo, around floors 96 and below, referred to as the down deep. (Sections 10–14)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#DrNichols -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#DrNichols">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <parentOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Nicholas"/>
+        <hasAge>Adult</hasAge>
+        <hasGivenName>Peter</hasGivenName>
+        <hasRole>Doctor (Nursery on Level 20)</hasRole>
+        <hasSex>Male</hasSex>
+        <hasStatus>Alive</hasStatus>
+        <hasSurname>Nichols</hasSurname>
+        <extractedSentence>Juliette&apos;s father, a nursery doctor who lost a son (Nicholas) prematurely. (Part 2, Proper Gauge 9)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Emma -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Emma">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <hasAge>Adult</hasAge>
+        <hasGivenName>Emma</hasGivenName>
+        <hasRole>Caretaker in Cafeteria</hasRole>
+        <hasSex>Female</hasSex>
+        <hasStatus>Alive</hasStatus>
+        <hasSurname>Unknown</hasSurname>
+        <extractedSentence>Holston saw Emma picking up scattered chalk and crayon from the stained tiles. (Part 1, Holston 1)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#FolderGeorgeCase -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#FolderGeorgeCase">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Document"/>
+        <hasOwner rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Juliette_Nichols"/>
+        <mentionedInChapter>19</mentionedInChapter>
+        <rdfs:comment>A closed murder case from the down deep that Juliette once helped solve. (Ch. 19 references)</rdfs:comment>
+        <rdfs:label>George’s Case Folder</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#FolderHolston -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#FolderHolston">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Document"/>
+        <hasOwner rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Juliette_Nichols"/>
+        <mentionedInChapter>19</mentionedInChapter>
+        <rdfs:comment>Closed case folder about Holston’s final days and volunteer cleaning. (Ch. 19)</rdfs:comment>
+        <rdfs:label>Holston’s Folder</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#FolderJahnsDeath -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#FolderJahnsDeath">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Document"/>
+        <hasOwner rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Marnes"/>
+        <mentionedInChapter>19</mentionedInChapter>
+        <rdfs:comment>Marnes’s open murder investigation notes, dotted with tears. (Ch. 19)</rdfs:comment>
+        <rdfs:label>Mayor Jahns’s Death Folder</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#FolderNeighborsDispute -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#FolderNeighborsDispute">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Document"/>
+        <hasOwner rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Juliette_Nichols"/>
+        <mentionedInChapter>19</mentionedInChapter>
+        <rdfs:comment>Minor law complaints between neighbors, waiting for new sheriff&apos;s review. (Ch. 19)</rdfs:comment>
+        <rdfs:label>Neighbors’ Dispute Folder</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#FolderTubGin -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#FolderTubGin">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Document"/>
+        <hasOwner rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Juliette_Nichols"/>
+        <mentionedInChapter>19</mentionedInChapter>
+        <rdfs:comment>One of the open cases Juliette has to read and manage. (Ch. 19)</rdfs:comment>
+        <rdfs:label>Tub-Gin Incident Folder</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#GeneratorRealignment -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#GeneratorRealignment">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
+        <occursInLocation rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#GeneratorRoom"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Juliette_Nichols"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Marck"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Shirly"/>
+        <rdfs:label>Generator Re-Alignment and Refit</rdfs:label>
+        <extractedSentence>Major overhaul of the main generator. 
+    Successfully restarted with near-perfect alignment. (Ch. 17)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#GeneratorRoom -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#GeneratorRoom">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel140"/>
+        <rdfs:label>Generator Room</rdfs:label>
+        <extractedSentence>Juliette&apos;s primary workstation, containing the massive generator. (Section 10, 11)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#GirlReadingSpot -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#GirlReadingSpot">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel57"/>
+        <rdfs:comment>Area on the steel grating where a girl was reading in the dim light. (Ch. 15)</rdfs:comment>
+        <rdfs:label>Landing 57 Reading Spot</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Hills -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Hills">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <adjacentTo rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Outside"/>
+        <rdfs:label>Hills near the silo</rdfs:label>
+        <extractedSentence>Lifeless hills... had hardly changed since Holston was a boy. (Part 1, Holston 1)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#HoldingCell -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#HoldingCell">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel01"/>
+        <rdfs:label>Holding Cell</rdfs:label>
+        <extractedSentence>Get the mayor. Tell her I want to go outside. (Holston in the holding cell, Part 1, Holston 1)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Holston -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Holston">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <marriedTo rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Allison_Holston"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#HolstonCleaning"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#HolstonClimb"/>
+        <hasAge>Adult</hasAge>
+        <hasGivenName>Holston</hasGivenName>
+        <hasRole>Sheriff (resigned/cleaned)</hasRole>
+        <hasSex>Male</hasSex>
+        <hasStatus>Deceased</hasStatus>
+        <hasSurname>Unknown</hasSurname>
+        <extractedSentence>Holston... the protagonist who chose to go outside after his wife&apos;s death. (Parts 1-7)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#HolstonCleaning -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#HolstonCleaning">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
+        <occursInLocation rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Outside"/>
+        <rdfs:label>Holston&apos;s Cleaning</rdfs:label>
+        <extractedSentence>Holston stepped out of the airlock, cleaned the sensors, and trudged up the hill... (Part 1, Holston 6-7)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#HolstonClimb -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#HolstonClimb">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
+        <occursInLocation rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Stairwell"/>
+        <rdfs:label>Holston&apos;s Final Climb</rdfs:label>
+        <extractedSentence>Holston climbed to his death... winding his way around the spiral staircase. (Part 1, Holston 1)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#HolstonsFather -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#HolstonsFather">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <parentOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Holston"/>
+        <hasAge>Unknown</hasAge>
+        <hasGivenName>Unknown</hasGivenName>
+        <hasRole>Holston&apos;s Father</hasRole>
+        <hasSex>Male</hasSex>
+        <hasStatus>Unknown</hasStatus>
+        <hasSurname>Unknown</hasSurname>
+        <extractedSentence>Holston compared his old boots to his father&apos;s, which showed signs of wear. (Part 1, Holston 1)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#JahnsDeathEvent -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#JahnsDeathEvent">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
+        <occursInLocation rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Nursery"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#DrNichols"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Marnes"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#MayorJahns"/>
+        <rdfs:label>Death of Mayor Jahns</rdfs:label>
+        <extractedSentence>Mayor Jahns is poisoned via water canteen while passing through the nursery. (Ch. 15–16)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#JahnsFinalClimb -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#JahnsFinalClimb">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
+        <occursInLocation rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Stairwell"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Marnes"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#MayorJahns"/>
+        <rdfs:label>Jahns&apos;s Final Climb to Up Top</rdfs:label>
+        <extractedSentence>Jahns and Marnes climb from the down deep to mid-levels, 
+    culminating in Jahns&apos;s severe exhaustion and eventual collapse. (Ch. 15–16)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#JulietteInvestigatingHolston -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#JulietteInvestigatingHolston">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
+        <occursInLocation rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#HoldingCell"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Holston"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Juliette_Nichols"/>
+        <rdfs:label>Juliette Investigates Holston&apos;s Decision</rdfs:label>
+        <extractedSentence>Juliette pores over Holston’s case files, 
+    trying to understand why he volunteered for cleaning. (Ch. 19)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Juliette_Nichols -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Juliette_Nichols">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <childOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#DrNichols"/>
+        <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#DownDeep"/>
+        <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel140"/>
+        <worksIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#GeneratorRoom"/>
+        <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">33</hasAge>
+        <hasGivenName>Juliette</hasGivenName>
+        <hasRole>Mechanical (potential sheriff candidate)</hasRole>
+        <hasSex>Female</hasSex>
+        <hasStatus>Alive</hasStatus>
+        <hasSurname>Nichols</hasSurname>
+        <extractedSentence>Juliette&apos;s unwavering devotion to repairing the generator. She also &apos;borrowed&apos; heat tape from IT. (Sections 10–14)</extractedSentence>
+        <extractedSentence>Mentioned as Dr. Nichols&apos;s daughter, moved to Mechanical at age 13, hasn&apos;t visited father in 20 years. (Part 2, Proper Gauge 9)</extractedSentence>
+        <extractedSentence>Now stationed at the up top as Sheriff, investigating Mayor Jahns&apos;s death, 
+    pondering Holston&apos;s final decision, realigning the generator in Mechanical, 
+    and grappling with new political pressures. (Ch. 15–19)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Knox -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Knox">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <hasAge>Adult</hasAge>
+        <hasRole>Head of Mechanical</hasRole>
+        <hasSex>Male</hasSex>
+        <hasStatus>Alive</hasStatus>
+        <rdfs:label>Knox</rdfs:label>
+        <extractedSentence>A large, bearded man in charge of Mechanical, called &apos;Knox.&apos; (Section 10, 14)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Lounge -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Lounge">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <adjacentTo rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Cafeteria"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel01"/>
+        <rdfs:label>Lounge</rdfs:label>
+        <extractedSentence>At the top of the spiral stairway...the adjoining lounge. (Part 1, Holston 1)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Lukas -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Lukas">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <hasAge>Adult</hasAge>
+        <hasRole>IT Worker</hasRole>
+        <hasSex>Male</hasSex>
+        <hasStatus>Alive</hasStatus>
+        <rdfs:label>Lukas</rdfs:label>
+        <extractedSentence>An IT technician who interacts with Juliette and Bernard, forging official documents for the new sheriff. (Ch. 16)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Marck -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Marck">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#DownDeep"/>
+        <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel140"/>
+        <hasAge>Adult</hasAge>
+        <hasRole>Mechanic (Electrical background)</hasRole>
+        <hasSex>Male</hasSex>
+        <hasStatus>Alive</hasStatus>
+        <rdfs:label>Marck</rdfs:label>
+        <extractedSentence>A friendly mechanic, married to Shirly, who guided Jahns and Marnes around. (Section 13)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Marnes -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Marnes">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <hasAge>Older Adult</hasAge>
+        <hasGivenName>Unknown</hasGivenName>
+        <hasRole>Deputy, later acting Sheriff</hasRole>
+        <hasSex>Male</hasSex>
+        <hasStatus>Alive</hasStatus>
+        <hasSurname>Marnes</hasSurname>
+        <extractedSentence>Deputy Marnes becomes distraught after Mayor Jahns&apos;s death. Grows suspicious of Bernard. (Ch. 15–19)</extractedSentence>
+        <extractedSentence>Grapples with personal grief, shares an intimate moment with Jahns 
+during the climb. Possibly romantic feelings from years ago, 
+ending with her tragic death. (Ch. 15–16)</extractedSentence>
+        <extractedSentence>Holston’s deputy, close friend, and confidant. (Part 1, Holston 1, 2; Part 2, Proper Gauge 8-9)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#MarnesCot -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#MarnesCot">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#PhysicalObject"/>
+        <mentionedInChapter>15</mentionedInChapter>
+        <rdfs:comment>Cot used by Marnes, behind bars in the mid-level station. (Ch. 15)</rdfs:comment>
+        <rdfs:label>Marnes’s Cot in Holding Cell</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#MayorJahns -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#MayorJahns">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <hasAge>Older Adult</hasAge>
+        <hasGivenName>Marie</hasGivenName>
+        <hasRole>Mayor of the Silo</hasRole>
+        <hasSex>Female</hasSex>
+        <hasStatus>Alive</hasStatus>
+        <hasStatus>Deceased</hasStatus>
+        <hasSurname>Jahns</hasSurname>
+        <extractedSentence>Died en route to the up top, presumably murdered via poisoned water canteen. (Ch. 15-16)</extractedSentence>
+        <extractedSentence>Mayor Jahns... &apos;I&apos;ve been mayor too long,&apos; she said. (Part 1, Holston 2; Part 2, Proper Gauge 8-9)</extractedSentence>
+        <extractedSentence>Realizes how compartmentalized the silo is (up top, mids, down deep).
+Embarks on final climb, dies at nursery from a poison-laced canteen. (Ch. 15–16)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#MealAtMessHall -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#MealAtMessHall">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
+        <occursInLocation rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#MessHallDownDeep"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Marck"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Marnes"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#MayorJahns"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Shirly"/>
+        <rdfs:label>Meal at Down Deep Mess Hall</rdfs:label>
+        <extractedSentence>Marnes, Jahns, Marck, and Shirly share a meal, discussing Juliette&apos;s character. (Sections 12–13)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#MeetingJulietteApartment -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#MeetingJulietteApartment">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
+        <occursInLocation rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#PrivateApartmentMechanical"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Juliette_Nichols"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Marnes"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#MayorJahns"/>
+        <rdfs:label>Meeting in the Private Apartment</rdfs:label>
+        <extractedSentence>Juliette visits Jahns and Marnes in the small apartment, agrees to become Sheriff. (Sections 13–14)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#MessHallDownDeep -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#MessHallDownDeep">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel140"/>
+        <rdfs:label>Mess Hall (Down Deep)</rdfs:label>
+        <extractedSentence>Where Marck, Shirly, Jahns, and Marnes shared a meal. (Sections 10–14)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#MidLevelDeputyStation -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#MidLevelDeputyStation">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel50s"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel55"/>
+        <rdfs:comment>Deputy station located in the mid-level floors, around 50–60. (Ch. 15)</rdfs:comment>
+        <rdfs:label>Mid-level Deputy Station</rdfs:label>
+        <extractedSentence>Where Jahns and Marnes stay while climbing up, located around the mid floors. (Ch. 15)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Nicholas -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Nicholas">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <childOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#DrNichols"/>
+        <hasAge>Neonate</hasAge>
+        <hasGivenName>Nicholas</hasGivenName>
+        <hasRole>Infant</hasRole>
+        <hasSex>Male</hasSex>
+        <hasStatus>Deceased</hasStatus>
+        <hasSurname>Nichols</hasSurname>
+        <extractedSentence>Nicholas died prematurely, causing great strain on the family. (Part 2, Proper Gauge 9)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#NicholasBirth -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#NicholasBirth">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
+        <occursInLocation rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Nursery"/>
+        <rdfs:label>Nicholas Nichols&apos;s Birth (Deceased)</rdfs:label>
+        <extractedSentence>He weighed one pound eight ounces... complications in the incubator. (Part 2, Proper Gauge 9)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Nursery -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Nursery">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel20"/>
+        <rdfs:label>Nursery on Level 20</rdfs:label>
+        <extractedSentence>Dr. Nichols is in the nursery. A place for newborns and mothers. (Part 2, Proper Gauge 9)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#OilPump -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#OilPump">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Machine"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel142"/>
+        <rdfs:label>Oil Pump</rdfs:label>
+        <extractedSentence>A pump that brings up oil to be refined for power. (Section 10)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#OrangeHairShadow -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#OrangeHairShadow">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel140"/>
+        <shadowOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Knox"/>
+        <hasAge>Teen</hasAge>
+        <hasRole>Shadow</hasRole>
+        <hasSex>Unknown</hasSex>
+        <hasStatus>Alive</hasStatus>
+        <rdfs:label>Orange-haired Shadow</rdfs:label>
+        <extractedSentence>A young shadow with bright orange hair who guided Jahns and Marnes to Juliette in the generator room. (Section 10)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Outside -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Outside">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <rdfs:label>Outside</rdfs:label>
+        <extractedSentence>He gazed at the dead world some ancient peoples had left behind. (Part 1, Holston 2)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#PoisonCanteen -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#PoisonCanteen">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#PhysicalObject"/>
+        <hasOwner rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Marnes"/>
+        <mentionedInChapter>15,16</mentionedInChapter>
+        <rdfs:comment>Canteen shared by Jahns and Marnes; used to deliver poison to Jahns. (Ch. 15–16)</rdfs:comment>
+        <rdfs:label>Poisoned Canteen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#PowerHoliday -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#PowerHoliday">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
+        <rdfs:label>Power Holiday</rdfs:label>
+        <extractedSentence>A forced reduction of power usage to allow Mechanical to service the main generator, 
+    partially triggered by Juliette&apos;s request as new sheriff. (Ch. 15–17)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#PrivateApartmentMechanical -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#PrivateApartmentMechanical">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel140"/>
+        <rdfs:label>Private Apartment (Mechanical)</rdfs:label>
+        <extractedSentence>A small apartment reserved for important guests near the bunkhouse. (Section 14)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#ProposedPowerHoliday -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#ProposedPowerHoliday">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
+        <rdfs:label>Proposed Power Holiday</rdfs:label>
+        <extractedSentence>Juliette&apos;s suggestion to reduce IT&apos;s load and let the generator be serviced. (Sections 10–14)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#RuinedCity -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#RuinedCity">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <rdfs:label>Ruined City</rdfs:label>
+        <extractedSentence>Beyond the stately rolling crests... a familiar and rotting skyline caught the morning rays. (Part 1, Holston 1)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SheriffStar -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SheriffStar">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#PhysicalObject"/>
+        <hasOwner rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Juliette_Nichols"/>
+        <mentionedInChapter>19</mentionedInChapter>
+        <rdfs:comment>A brass sheriff badge once worn by Holston, now pinned by Juliette. (Ch. 19)</rdfs:comment>
+        <rdfs:label>Juliette’s Sheriff Star</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Shirly -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Shirly">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#DownDeep"/>
+        <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel140"/>
+        <hasAge>Adult</hasAge>
+        <hasRole>Mechanic (Marck&apos;s wife)</hasRole>
+        <hasSex>Female</hasSex>
+        <hasStatus>Alive</hasStatus>
+        <rdfs:label>Shirly</rdfs:label>
+        <extractedSentence>Works on shift opposite Marck, also a mechanic in Mechanical. (Section 13)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <rdfs:label>Silo</rdfs:label>
+        <extractedSentence>...&apos;the buried silo like a straw in a glass&apos;... (Part 1, Holston 1)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel01 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel01">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 1 (Top)</rdfs:label>
+        <extractedSentence>The top of the spiral stairway... the widest rooms of the entire silo complex: the cafeteria and adjoining lounge (Part 1, Holston 1)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel02 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel02">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel03 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel03">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel04 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel04">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel05 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel05">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 5</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel06 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel06">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 6</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel07 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel07">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 7</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel08 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel08">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 8</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel09 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel09">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 9</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel10 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel10">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 10</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel100 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel100">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 100</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel101 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel101">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 101</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel102 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel102">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 102</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel103 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel103">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 103</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel104 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel104">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 104</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel105 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel105">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 105</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel106 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel106">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 106</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel107 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel107">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 107</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel108 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel108">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 108</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel109 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel109">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 109</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel11 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel11">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 11</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel110 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel110">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 110</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel111 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel111">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 111</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel112 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel112">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 112</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel113 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel113">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 113</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel114 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel114">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 114</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel115 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel115">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 115</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel116 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel116">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 116</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel117 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel117">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 117</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel118 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel118">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 118</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel119 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel119">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 119</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel12 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel12">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 12</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel120 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel120">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 120</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel121 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel121">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 121</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel122 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel122">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 122</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel123 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel123">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 123</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel124 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel124">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 124</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel125 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel125">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 125</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel126 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel126">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 126</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel127 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel127">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 127</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel128 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel128">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 128</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel129 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel129">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 129</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel13 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel13">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 13</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel130 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel130">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 130</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel131 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel131">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 131</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel132 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel132">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 132</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel133 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel133">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 133</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel134 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel134">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 134</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel135 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel135">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 135</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel136 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel136">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 136</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel137 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel137">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 137</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel138 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel138">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 138</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel139 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel139">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 139</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel14 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel14">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 14</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel140 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel140">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 140</rdfs:label>
+        <extractedSentence>Knox&apos;s territory in Mechanical, near the generator, is around floor 140. (Sections 10–14)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel141 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel141">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 141</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel142 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel142">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 142</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel143 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel143">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 143</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel144 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel144">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 144</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel15 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel15">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 15</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel16 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel16">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 16</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel17 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel17">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 17</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel18 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel18">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 18</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel19 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel19">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 19</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel20 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel20">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 20</rdfs:label>
+        <extractedSentence>Dr. Nichols currently works in the nursery on 20 (Part 2, Proper Gauge 9)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel21 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel21">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 21</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel22 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel22">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 22</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel23 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel23">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 23</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel24 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel24">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 24</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel25 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel25">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 25</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel26 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel26">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 26</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel27 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel27">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 27</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel28 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel28">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 28</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel29 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel29">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 29</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel30 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel30">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 30</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel31 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel31">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 31</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel32 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel32">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 32</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel33 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel33">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 33</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel34 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel34">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 34</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel35 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel35">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 35</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel36 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel36">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 36</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel37 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel37">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 37</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel38 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel38">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 38</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel39 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel39">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 39</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel40 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel40">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 40</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel41 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel41">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 41</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel42 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel42">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 42</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel43 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel43">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 43</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel44 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel44">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 44</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel45 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel45">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 45</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel46 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel46">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 46</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel47 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel47">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 47</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel48 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel48">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 48</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel49 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel49">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 49</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel50 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel50">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 50</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel50s -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel50s"/>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel51 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel51">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 51</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel52 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel52">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 52</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel53 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel53">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 53</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel54 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel54">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 54</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel55 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel55">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:comment>Hypothetical location of the mid-level deputy station if you want a single floor assignment.</rdfs:comment>
+        <rdfs:label>Silo Level 55</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel56 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel56">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 56</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel57 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel57">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:comment>Mentioned in Ch. 15, where a young girl is reading a children’s book in the dim light.</rdfs:comment>
+        <rdfs:label>Silo Level 57</rdfs:label>
+        <rdfs:label>Silo Level 57 (Landing 57)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel58 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel58">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:comment>Referenced in Ch. 15, another stopping point for Jahns and Marnes during their climb.</rdfs:comment>
+        <rdfs:label>Silo Level 58</rdfs:label>
+        <rdfs:label>Silo Level 58 (Landing 58)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel59 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel59">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 59</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel60 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel60">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 60</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel61 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel61">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 61</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel62 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel62">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 62</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel63 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel63">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 63</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel64 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel64">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 64</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel65 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel65">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 65</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel66 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel66">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 66</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel67 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel67">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 67</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel68 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel68">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 68</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel69 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel69">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 69</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel70 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel70">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 70</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel71 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel71">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 71</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel72 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel72">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 72</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel73 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel73">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 73</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel74 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel74">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 74</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel75 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel75">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 75</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel76 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel76">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 76</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel77 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel77">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 77</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel78 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel78">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 78</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel79 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel79">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 79</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel80 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel80">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 80</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel81 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel81">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 81</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel82 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel82">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 82</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel83 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel83">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 83</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel84 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel84">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 84</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel85 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel85">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 85</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel86 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel86">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 86</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel87 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel87">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 87</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel88 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel88">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 88</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel89 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel89">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 89</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel90 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel90">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 90</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel91 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel91">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 91</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel92 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel92">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 92</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel93 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel93">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 93</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel94 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel94">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 94</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel95 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel95">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 95</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel96 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel96">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 96</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel97 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel97">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 97</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel98 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel98">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 98</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel99 -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel99">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Silo Level 99</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Stairwell -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Stairwell">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:label>Spiral Stairwell</rdfs:label>
+        <extractedSentence>Holston took his time... winding around and around the spiral staircase (Part 1, Holston 1)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Susan -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Susan">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <parentOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SusanBoy"/>
+        <hasAge>Adult</hasAge>
+        <hasGivenName>Susan</hasGivenName>
+        <hasRole>Mother</hasRole>
+        <hasSex>Female</hasSex>
+        <hasStatus>Alive</hasStatus>
+        <hasSurname>Unknown</hasSurname>
+        <extractedSentence>Holston recognized Susan’s boy, the child who bumped into him. (Part 1, Holston 1)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SusanBoy -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SusanBoy">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <childOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Susan"/>
+        <hasAge>Child</hasAge>
+        <hasGivenName>Unknown</hasGivenName>
+        <hasRole>Child</hasRole>
+        <hasSex>Male</hasSex>
+        <hasStatus>Alive</hasStatus>
+        <hasSurname>Unknown</hasSurname>
+        <extractedSentence>Susan’s boy, who bumped into Holston’s knees like a comet. (Part 1, Holston 1)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#TapeRequisitionIncident -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#TapeRequisitionIncident">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
+        <occursInLocation rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel140"/>
+        <rdfs:label>Tape Requisition Incident</rdfs:label>
+        <extractedSentence>Juliette intercepting heat tape bound for IT, using it to fix a heat exchanger. (Section 13)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Walker -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Walker">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <hasAge>Older Adult</hasAge>
+        <hasRole>Electrical Specialist (Rarely leaves workshop)</hasRole>
+        <hasSex>Male</hasSex>
+        <hasStatus>Alive</hasStatus>
+        <rdfs:label>Walker (Walk)</rdfs:label>
+        <extractedSentence>Known as &apos;Walk,&apos; an older man in Electrical who rarely leaves his shop. (Sections 13–14)</extractedSentence>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
