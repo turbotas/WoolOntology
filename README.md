@@ -45,6 +45,6 @@ If you’d like to add more details or refine the ontology:
 2. Make your changes in a branch,  
 3. Submit a pull request.
 
-We welcome corrections and expansions—just remember to keep the scope focused on the *Wool* books. If referencing the TV adaptation, please do so in separate Turtle files to avoid mixing details.
+We welcome corrections and expansions—just remember to keep the scope focused on the *Wool* books. If referencing the TV adaptation, please do so in separate RDF files to avoid mixing details. There is an **extractedSentence** field to include the context from the book: please do not put anything more than a tiny snippet of the book here - we don't want to go beyond fair use.  Please buy the book - it's a classic dystopian future work, thanks Hugh!
 
 **Thanks for exploring the Wool Ontology Project!** Feel free to open an issue or pull request with questions or enhancements.
