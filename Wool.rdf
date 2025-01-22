@@ -400,6 +400,23 @@
     
 
 
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Bat_at_Kippers -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Bat_at_Kippers">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Bazaar -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Bazaar">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel100"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#BernardConfrontation -->
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#BernardConfrontation">
@@ -449,6 +466,7 @@
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Cafeteria">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
         <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel01"/>
+        <rdfs:comment>Turnstiles into the cafeteria</rdfs:comment>
         <rdfs:label>Cafeteria</rdfs:label>
         <extractedSentence>The cafeteria and the adjoining lounge... level with him now. (Part 1, Holston 1)</extractedSentence>
     </owl:NamedIndividual>
@@ -487,7 +505,7 @@
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#ConversationKnox">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
         <occursInLocation rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel140"/>
-        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Knox"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Deagan_Knox"/>
         <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Marnes"/>
         <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#MayorJahns"/>
         <rdfs:label>Knox Meeting</rdfs:label>
@@ -507,6 +525,29 @@
     
 
 
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Coroners_Office -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Coroners_Office">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Deagan_Knox -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Deagan_Knox">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <hasAge>Adult</hasAge>
+        <hasGivenName>Deagan</hasGivenName>
+        <hasRole>Head of Mechanical</hasRole>
+        <hasSex>Male</hasSex>
+        <hasStatus>Alive</hasStatus>
+        <rdfs:label>Deagan Knox</rdfs:label>
+        <extractedSentence>A large, bearded man in charge of Mechanical, called &apos;Knox.&apos; (Section 10, 14)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Deputy_Station_Down_Deep -->
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Deputy_Station_Down_Deep">
@@ -521,6 +562,34 @@
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Deputy_Station_Mids">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
         <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel72"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Dirt_Farm -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Dirt_Farm">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel09"/>
+        <rdfs:comment>Coroner works at the dirt farm</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Doc_Hicks -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Doc_Hicks">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <hasRole>Doctor (Down Deep)</hasRole>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Doctor_ONeil -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Doctor_ONeil">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <hasRole>Doctor (Up Top)</hasRole>
     </owl:NamedIndividual>
     
 
@@ -641,11 +710,40 @@
     
 
 
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Forgiveness_Moratorium -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Forgiveness_Moratorium">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Funeral -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Funeral">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
+        <rdfs:comment>Funary Customs
+Priest hands out food such as ripe tomatoes.  Partial fill of the grave then attendees toss in the seeds from their fruit.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Gardens -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Gardens">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <rdfs:comment>Gardens are somewhere in the fifties.  Growing Fruit. Oranges. Tomatoes. Workers wear Green.  Tasting halls and dining halls.+ 1Level down to the guest rooms</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Garment_District -->
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Garment_District">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
         <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel14"/>
+        <rdfs:comment>Garment Distict (some where between first tiker of apartments and the second tier!)
+The garment district next  dyes and chemicals.  Food stall at the edge of the district. Multicoloured overalls.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -790,6 +888,30 @@
     
 
 
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#ID_Cards -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#ID_Cards">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#PhysicalObject"/>
+        <rdfs:comment>ID cards
+Cards coloured blue for mechanical
+Gold coloured for Shriffs Deputy and the Mayor</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#IT -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#IT">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel34"/>
+        <rdfs:comment>IT Is three levels.
+Behind main doors to IT Comprises Offices, Apartments and Workshops.
+
+Less than 2 dozen men and women work here (mostly men).</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#JahnsDeathEvent -->
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#JahnsDeathEvent">
@@ -814,6 +936,14 @@
         <rdfs:label>Jahns&apos;s Final Climb to Up Top</rdfs:label>
         <extractedSentence>Jahns and Marnes climb from the down deep to mid-levels, 
     culminating in Jahns&apos;s severe exhaustion and eventual collapse. (Ch. 15–16)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Judiciary -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Judiciary">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
     </owl:NamedIndividual>
     
 
@@ -865,16 +995,11 @@
     
 
 
-    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Knox -->
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Lottery -->
 
-    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Knox">
-        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
-        <hasAge>Adult</hasAge>
-        <hasRole>Head of Mechanical</hasRole>
-        <hasSex>Male</hasSex>
-        <hasStatus>Alive</hasStatus>
-        <rdfs:label>Knox</rdfs:label>
-        <extractedSentence>A large, bearded man in charge of Mechanical, called &apos;Knox.&apos; (Section 10, 14)</extractedSentence>
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Lottery">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
+        <rdfs:comment>Lotteries follow soon after deaths.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -976,6 +1101,34 @@ ending with her tragic death. (Ch. 15–16)</extractedSentence>
         <extractedSentence>Mayor Jahns... &apos;I&apos;ve been mayor too long,&apos; she said. (Part 1, Holston 2; Part 2, Proper Gauge 8-9)</extractedSentence>
         <extractedSentence>Realizes how compartmentalized the silo is (up top, mids, down deep).
 Embarks on final climb, dies at nursery from a poison-laced canteen. (Ch. 15–16)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Mayor_Humphries -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Mayor_Humphries">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <hasStatus>Deceased</hasStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Mayor_Jeffers -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Mayor_Jeffers">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <hasStatus>Deceased</hasStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Mayoral_Succession -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Mayoral_Succession">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
+        <rdfs:comment>Mayoral timeline.
+Mayor Jahns &lt; Mayor Humphries &lt; Mayor Jeffers</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1096,7 +1249,7 @@ Embarks on final climb, dies at nursery from a poison-laced canteen. (Ch. 15–1
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#OrangeHairShadow">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
         <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel140"/>
-        <shadowOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Knox"/>
+        <shadowOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Deagan_Knox"/>
         <hasAge>Teen</hasAge>
         <hasRole>Shadow</hasRole>
         <hasSex>Unknown</hasSex>
@@ -1113,6 +1266,25 @@ Embarks on final climb, dies at nursery from a poison-laced canteen. (Ch. 15–1
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
         <rdfs:label>Outside</rdfs:label>
         <extractedSentence>He gazed at the dead world some ancient peoples had left behind. (Part 1, Holston 2)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Overalls -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Overalls">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#PhysicalObject"/>
+        <rdfs:comment>Blue overalls for Mechanicals
+IT wear red overalls</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Pam -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Pam">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <rdfs:comment>Pam works in the upper canteen, young woman</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1167,6 +1339,16 @@ Embarks on final climb, dies at nursery from a poison-laced canteen. (Ch. 15–1
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
         <rdfs:label>Ruined City</rdfs:label>
         <extractedSentence>Beyond the stately rolling crests... a familiar and rotting skyline caught the morning rays. (Part 1, Holston 1)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Second_Tier_of_Apartments -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Second_Tier_of_Apartments">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel17"/>
+        <rdfs:comment>Entered the second tier of apartments, down below the 16th floor.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1326,6 +1508,7 @@ Embarks on final climb, dies at nursery from a poison-laced canteen. (Ch. 15–1
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel100">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
         <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
+        <rdfs:comment>double wide landing</rdfs:comment>
         <rdfs:label>Silo Level 100</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2741,6 +2924,32 @@ Embarks on final climb, dies at nursery from a poison-laced canteen. (Ch. 15–1
     
 
 
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#The_Lower_Gardens -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#The_Lower_Gardens">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <rdfs:comment>The lower gardens somewhere above the 130’s</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#The_Pact -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#The_Pact">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#PhysicalObject"/>
+        <rdfs:comment>The Pact</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#The_Vault -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#The_Vault">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Up_Top -->
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Up_Top">
@@ -2768,6 +2977,16 @@ Embarks on final climb, dies at nursery from a poison-laced canteen. (Ch. 15–1
         <hasStatus>Alive</hasStatus>
         <rdfs:label>Walker (Walk)</rdfs:label>
         <extractedSentence>Known as &apos;Walk,&apos; an older man in Electrical who rarely leaves his shop. (Sections 13–14)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Will -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Will">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#PhysicalObject"/>
+        <rdfs:comment>Wills
+Silo does use wills</rdfs:comment>
     </owl:NamedIndividual>
 </rdf:RDF>
 
