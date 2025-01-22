@@ -1,6 +1,6 @@
 ﻿# Wool Ontology Project
 
-This repository contains an **RDF ontology** capturing characters, locations, events, and items from Hugh Howey’s *Wool* series. **Be warned**: The files here include **significant spoilers** for the *Wool* **books**, which may deviate from the events of the Apple TV "Silo" Series.  
+This repository contains an **RDF ontology** capturing characters, locations, events, and items from Hugh Howey’s *Wool* series. **Be warned**: The files here include **significant spoilers** for the *Wool* **books**, which also deviates significantly from the events of the Apple TV "Silo" Series.  
 
 ## Purpose of This Project
 
