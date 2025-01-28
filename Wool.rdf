@@ -200,6 +200,16 @@
     
 
 
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#diesInChapter -->
+
+    <owl:DatatypeProperty rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#diesInChapter">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#hasAge -->
 
     <owl:DatatypeProperty rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#hasAge">
@@ -435,6 +445,8 @@ All women have a birth control device inserted in their hip at birth and only re
     <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo_Concept -->
 
     <owl:Class rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo_Concept">
+        <rdfs:comment>Foodstuff examples
+Tomatoes</rdfs:comment>
         <rdfs:label>Silo Concept</rdfs:label>
     </owl:Class>
     
@@ -499,6 +511,25 @@ All women have a birth control device inserted in their hip at birth and only re
     
 
 
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Amazing_Adventures_In_Georgia -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Amazing_Adventures_In_Georgia">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Books"/>
+        <rdfs:comment>From TV series but not contradictory
+Prop By Philippa Broadhurst</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Animals -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Animals">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo_Concept"/>
+        <rdfs:comment>rats  (rats as pets is illegal)</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Bat_at_Kippers -->
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Bat_at_Kippers">
@@ -512,6 +543,16 @@ All women have a birth control device inserted in their hip at birth and only re
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Bazaar">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
         <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Ben -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Ben">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <hasSex>male</hasSex>
+        <rdfs:comment>From TV series steps grafitti (Does not contradict canon)  egging on stairs racers.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -563,6 +604,7 @@ Signed by the Mayor</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Birth_Lottery">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo_Concept"/>
+        <rdfs:label>Birth Lottery</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -590,6 +632,15 @@ Signed by the Mayor</rdfs:comment>
     
 
 
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Caster -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Caster">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo_Concept"/>
+        <rdfs:label>Down Deep Deputy Station</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#ChildrensBookFloor57 -->
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#ChildrensBookFloor57">
@@ -606,13 +657,22 @@ Signed by the Mayor</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Clarke">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <marriedTo rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Emma"/>
         <hasAge>Adult</hasAge>
         <hasGivenName>Clarke</hasGivenName>
-        <hasRole>Emma&apos;s Husband / Cafeteria Helper</hasRole>
+        <hasRole>Cafeteria Helper</hasRole>
         <hasSex>Male</hasSex>
         <hasStatus>Alive</hasStatus>
         <hasSurname>Unknown</hasSurname>
         <extractedSentence>Her husband, Clarke, sat behind a table with cups of juice and cookies. (Part 1, Holston 1)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Cleaning -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Cleaning">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo_Concept"/>
     </owl:NamedIndividual>
     
 
@@ -686,6 +746,19 @@ Signed by the Mayor</rdfs:comment>
     
 
 
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Deputy_Marsh -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Deputy_Marsh">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Deputy_Station_Mids"/>
+        <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Mids"/>
+        <hasRole>Deputy</hasRole>
+        <hasSex>male</hasSex>
+        <rdfs:label>Deputy Marsh</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Deputy_Station_Down_Deep -->
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Deputy_Station_Down_Deep">
@@ -704,16 +777,6 @@ Signed by the Mayor</rdfs:comment>
     
 
 
-    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Dirt_Farm -->
-
-    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Dirt_Farm">
-        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
-        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel09"/>
-        <rdfs:comment>Coroner works at the dirt farm</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Doc_Hicks -->
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Doc_Hicks">
@@ -723,24 +786,45 @@ Signed by the Mayor</rdfs:comment>
     
 
 
-    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Doctor_ONeil -->
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Doctor_Nichols -->
 
-    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Doctor_ONeil">
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Doctor_Nichols">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
-        <hasRole>Doctor (Up Top)</hasRole>
+        <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Nursery"/>
+        <parentOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Juliette_Nichols"/>
+        <parentOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Nicholas"/>
+        <hasAge>Adult</hasAge>
+        <hasGivenName>Peter</hasGivenName>
+        <hasRole>Doctor (Nursery on Level 20)</hasRole>
+        <hasSex>Male</hasSex>
+        <hasStatus>Alive</hasStatus>
+        <hasSurname>Nichols</hasSurname>
+        <rdfs:label>Doctor Nichols</rdfs:label>
+        <extractedSentence>Juliette&apos;s father, a nursery doctor who lost a son (Nicholas) prematurely. (Part 2, Proper Gauge 9)</extractedSentence>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Donald -->
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Doctor_ONeil -->
 
-    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Donald">
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Doctor_ONeil">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Up_Top"/>
+        <hasRole>Doctor (Up Top)</hasRole>
+        <rdfs:label>Doctor ONeil</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Donald_Jahns -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Donald_Jahns">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
         <hasAge>Unknown</hasAge>
         <hasRole>Deceased Husband of Mayor Jahns</hasRole>
         <hasSex>Male</hasSex>
         <hasStatus>Deceased (long ago)</hasStatus>
-        <rdfs:label>Donald</rdfs:label>
+        <rdfs:label>Donald Jahns</rdfs:label>
         <extractedSentence>Mentioned as Jahns’s late husband, fueling her grief and decisions. (Ch. 15–16)</extractedSentence>
     </owl:NamedIndividual>
     
@@ -750,6 +834,7 @@ Signed by the Mayor</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#DownDeep">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo_Concept"/>
         <rdfs:comment>General label for the lower 1/3 of the silo.</rdfs:comment>
         <rdfs:label>Down Deep</rdfs:label>
         <extractedSentence>The bottom third of the silo, around floors 96 and below, referred to as the down deep. (Sections 10–14)</extractedSentence>
@@ -757,19 +842,10 @@ Signed by the Mayor</rdfs:comment>
     
 
 
-    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#DrNichols -->
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Elise -->
 
-    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#DrNichols">
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Elise">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
-        <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Nursery"/>
-        <parentOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Nicholas"/>
-        <hasAge>Adult</hasAge>
-        <hasGivenName>Peter</hasGivenName>
-        <hasRole>Doctor (Nursery on Level 20)</hasRole>
-        <hasSex>Male</hasSex>
-        <hasStatus>Alive</hasStatus>
-        <hasSurname>Nichols</hasSurname>
-        <extractedSentence>Juliette&apos;s father, a nursery doctor who lost a son (Nicholas) prematurely. (Part 2, Proper Gauge 9)</extractedSentence>
     </owl:NamedIndividual>
     
 
@@ -778,6 +854,7 @@ Signed by the Mayor</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Emma">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <marriedTo rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Clarke"/>
         <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Cafeteria"/>
         <hasAge>Adult</hasAge>
         <hasGivenName>Emma</hasGivenName>
@@ -854,6 +931,15 @@ Signed by the Mayor</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Forgiveness_Moratorium">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo_Concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Funeral -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Funeral">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo_Concept"/>
     </owl:NamedIndividual>
     
 
@@ -904,6 +990,17 @@ The garment district next  dyes and chemicals.  Food stall at the edge of the di
     
 
 
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#George -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#George">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#DownDeep"/>
+        <hasSex>male</hasSex>
+        <hasStatus>deceased</hasStatus>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#GirlReadingSpot -->
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#GirlReadingSpot">
@@ -919,6 +1016,8 @@ The garment district next  dyes and chemicals.  Food stall at the edge of the di
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Gloria">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <marriedTo rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Glorias_Husband"/>
+        <hasSex>female</hasSex>
     </owl:NamedIndividual>
     
 
@@ -928,6 +1027,16 @@ The garment district next  dyes and chemicals.  Food stall at the edge of the di
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Glorias_Apartment">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
         <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel05"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Glorias_Husband -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Glorias_Husband">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <marriedTo rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Gloria"/>
+        <hasSex>male</hasSex>
     </owl:NamedIndividual>
     
 
@@ -948,6 +1057,23 @@ The garment district next  dyes and chemicals.  Food stall at the edge of the di
         <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#DownDeep"/>
         <hasRole>deputy</hasRole>
         <hasSex>male</hasSex>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Heat_Tape -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Heat_Tape">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#PhysicalObject"/>
+        <rdfs:label>Heat Tape</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Helena -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Helena">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
     </owl:NamedIndividual>
     
 
@@ -982,11 +1108,11 @@ The garment district next  dyes and chemicals.  Food stall at the edge of the di
         <marriedTo rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Allison_Holston"/>
         <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#HolstonCleaning"/>
         <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#HolstonClimb"/>
+        <diesInChapter rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7</diesInChapter>
         <hasAge>Adult</hasAge>
         <hasGivenName>Holston</hasGivenName>
         <hasRole>Sheriff (resigned/cleaned)</hasRole>
         <hasSex>Male</hasSex>
-        <hasStatus>Deceased</hasStatus>
         <hasSurname>Unknown</hasSurname>
         <extractedSentence>Holston... the protagonist who chose to go outside after his wife&apos;s death. (Parts 1-7)</extractedSentence>
     </owl:NamedIndividual>
@@ -1022,7 +1148,6 @@ The garment district next  dyes and chemicals.  Food stall at the edge of the di
         <parentOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Holston"/>
         <hasAge>Unknown</hasAge>
         <hasGivenName>Unknown</hasGivenName>
-        <hasRole>Holston&apos;s Father</hasRole>
         <hasSex>Male</hasSex>
         <hasStatus>Unknown</hasStatus>
         <hasSurname>Unknown</hasSurname>
@@ -1092,7 +1217,7 @@ Less than 2 dozen men and women work here (mostly men).</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#JahnsDeathEvent">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Event"/>
         <occursInLocation rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Nursery"/>
-        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#DrNichols"/>
+        <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Doctor_Nichols"/>
         <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Marnes"/>
         <participatesIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#MayorJahns"/>
         <rdfs:label>Death of Mayor Jahns</rdfs:label>
@@ -1111,6 +1236,15 @@ Less than 2 dozen men and women work here (mostly men).</rdfs:comment>
         <rdfs:label>Jahns&apos;s Final Climb to Up Top</rdfs:label>
         <extractedSentence>Jahns and Marnes climb from the down deep to mid-levels, 
     culminating in Jahns&apos;s severe exhaustion and eventual collapse. (Ch. 15–16)</extractedSentence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Jon -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Jon">
+        <hasSex>male</hasSex>
+        <rdfs:comment>From TV series steps grafitti (Does not contradict canon)  egging on stairs racers.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1141,7 +1275,7 @@ Less than 2 dozen men and women work here (mostly men).</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Juliette_Nichols">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
-        <childOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#DrNichols"/>
+        <childOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Doctor_Nichols"/>
         <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#DownDeep"/>
         <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel140"/>
         <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Up_Top"/>
@@ -1150,10 +1284,12 @@ Less than 2 dozen men and women work here (mostly men).</rdfs:comment>
         <hasGivenName>Juliette</hasGivenName>
         <hasRole>Mechanical</hasRole>
         <hasRole>Sheriff</hasRole>
+        <hasRole>Shift Foreman</hasRole>
         <hasSex>Female</hasSex>
         <hasStatus>Alive</hasStatus>
         <hasSurname>Nichols</hasSurname>
         <WoolAggregated:has_nickname>Jules</WoolAggregated:has_nickname>
+        <rdfs:label>Juliette Nichols</rdfs:label>
         <extractedSentence>Juliette&apos;s unwavering devotion to repairing the generator. She also &apos;borrowed&apos; heat tape from IT. (Sections 10–14)</extractedSentence>
         <extractedSentence>Mentioned as Dr. Nichols&apos;s daughter, moved to Mechanical at age 13, hasn&apos;t visited father in 20 years. (Part 2, Proper Gauge 9)</extractedSentence>
         <extractedSentence>Now stationed at the up top as Sheriff, investigating Mayor Jahns&apos;s death, 
@@ -1168,6 +1304,16 @@ Less than 2 dozen men and women work here (mostly men).</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Juliette_Nichols_Apartment">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
         <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel04"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Liz -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Liz">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <hasSex>female</hasSex>
+        <rdfs:comment>From TV series steps grafitti (Does not contradict canon)  egging on stairs racers.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1190,6 +1336,7 @@ Less than 2 dozen men and women work here (mostly men).</rdfs:comment>
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
         <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Up_Top"/>
         <hasAge>Adult</hasAge>
+        <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25</hasAge>
         <hasRole>IT Worker</hasRole>
         <hasSex>Male</hasSex>
         <hasStatus>Alive</hasStatus>
@@ -1238,12 +1385,14 @@ Less than 2 dozen men and women work here (mostly men).</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Marnes">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <diesInChapter rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21</diesInChapter>
         <hasAge>Older Adult</hasAge>
         <hasGivenName>Unknown</hasGivenName>
-        <hasRole>Deputy, later acting Sheriff</hasRole>
+        <hasRole>Acting Sheriff</hasRole>
+        <hasRole>Deputy</hasRole>
         <hasSex>Male</hasSex>
-        <hasStatus>Alive</hasStatus>
         <hasSurname>Marnes</hasSurname>
+        <rdfs:comment>No next of kin</rdfs:comment>
         <extractedSentence>Deputy Marnes becomes distraught after Mayor Jahns&apos;s death. Grows suspicious of Bernard. (Ch. 15–19)</extractedSentence>
         <extractedSentence>Grapples with personal grief, shares an intimate moment with Jahns 
 during the climb. Possibly romantic feelings from years ago, 
@@ -1273,28 +1422,17 @@ ending with her tragic death. (Ch. 15–16)</extractedSentence>
     
 
 
-    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Marsh -->
-
-    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Marsh">
-        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
-        <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Mids"/>
-        <hasRole>Deputy</hasRole>
-        <hasSex>male</hasSex>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#MayorJahns -->
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#MayorJahns">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <diesInChapter rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16</diesInChapter>
         <hasAge>Older Adult</hasAge>
         <hasGivenName>Marie</hasGivenName>
-        <hasRole>Mayor of the Silo</hasRole>
+        <hasRole>Mayor</hasRole>
         <hasSex>Female</hasSex>
-        <hasStatus>Alive</hasStatus>
-        <hasStatus>Deceased</hasStatus>
         <hasSurname>Jahns</hasSurname>
+        <rdfs:label>Mayor Jahns</rdfs:label>
         <extractedSentence>Died en route to the up top, presumably murdered via poisoned water canteen. (Ch. 15-16)</extractedSentence>
         <extractedSentence>Mayor Jahns... &apos;I&apos;ve been mayor too long,&apos; she said. (Part 1, Holston 2; Part 2, Proper Gauge 8-9)</extractedSentence>
         <extractedSentence>Realizes how compartmentalized the silo is (up top, mids, down deep).
@@ -1309,6 +1447,7 @@ Embarks on final climb, dies at nursery from a poison-laced canteen. (Ch. 15–1
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
         <hasRole>Mayor</hasRole>
         <hasStatus>Deceased</hasStatus>
+        <rdfs:label>Mayor Humphries</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1317,7 +1456,9 @@ Embarks on final climb, dies at nursery from a poison-laced canteen. (Ch. 15–1
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Mayor_Jeffers">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <hasRole>Mayor</hasRole>
         <hasStatus>Deceased</hasStatus>
+        <rdfs:label>Mayor Jeffers</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1414,6 +1555,7 @@ Mayor Jahns &lt; Mayor Humphries &lt; Mayor Jeffers</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Mids">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo_Concept"/>
     </owl:NamedIndividual>
     
 
@@ -1422,7 +1564,7 @@ Mayor Jahns &lt; Mayor Humphries &lt; Mayor Jeffers</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Nicholas">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
-        <childOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#DrNichols"/>
+        <childOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Doctor_Nichols"/>
         <hasAge>Neonate</hasAge>
         <hasGivenName>Nicholas</hasGivenName>
         <hasRole>Infant</hasRole>
@@ -1488,7 +1630,7 @@ Mayor Jahns &lt; Mayor Humphries &lt; Mayor Jeffers</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Outside">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
-        <rdfs:comment>Books: four different cameras providing panoramic views
+        <rdfs:comment>Books: four different cameras providing panoramic views (Holston dreamed of such things while he dutifully scrubbed the third lens, wiped, applied, sprayed, then moved to the last.)
 
 TV: The silo sits in a shallow depression in the ground.  There are horizontal doors that open from the ramp and close afer a person has egressed.  A small concrete pillar in the center of the depression houses the camera that the cleaners attend to.
 A single camera porovides a 180 degree view so there is a lot that we can’t see.</rdfs:comment>
@@ -1510,6 +1652,7 @@ A single camera porovides a 180 degree view so there is a lot that we can’t se
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Pam">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <worksIn rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Cafeteria"/>
         <rdfs:comment>Pam works in the upper canteen, young woman</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1519,6 +1662,26 @@ A single camera porovides a 180 degree view so there is a lot that we can’t se
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Peter_Billings">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <childOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Peter_Billings_Father"/>
+        <childOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Rebecca_Billings"/>
+        <hasRole>Deputy</hasRole>
+        <hasRole>mids deputy shadow</hasRole>
+        <hasRole>was Court Assistant</hasRole>
+        <hasSex>male</hasSex>
+        <hasStatus>alive</hasStatus>
+        <rdfs:label>Peter Billings</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Peter_Billings_Father -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Peter_Billings_Father">
+        <marriedTo rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Rebecca_Billings"/>
+        <parentOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Peter_Billings"/>
+        <hasRole>plumber in the hydroponics</hasRole>
+        <hasSex>male</hasSex>
+        <hasStatus>deceased a few years ago</hasStatus>
     </owl:NamedIndividual>
     
 
@@ -1615,6 +1778,19 @@ Books: the Silo is powered by oil: the down deep operate drills to find oil.</rd
     
 
 
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Rebecca_Billings -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Rebecca_Billings">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <marriedTo rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Peter_Billings_Father"/>
+        <parentOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Peter_Billings"/>
+        <hasRole>nursery</hasRole>
+        <hasSex>female</hasSex>
+        <hasStatus>alive</hasStatus>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Recycling_Chute -->
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Recycling_Chute">
@@ -1635,6 +1811,24 @@ Books: The Books don&apos;t mention a recyling chute so we are left assuming thi
     
 
 
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Rickson -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Rickson">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Robin -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Robin">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <hasSex>male</hasSex>
+        <rdfs:comment>From TV series steps grafitti (Does not contradict canon)  egging on stairs racers.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#RuinedCity -->
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#RuinedCity">
@@ -1650,6 +1844,16 @@ Books: The Books don&apos;t mention a recyling chute so we are left assuming thi
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Salvadore_Quinn">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
         <rdfs:comment>code?</rdfs:comment>
+        <rdfs:label>Salvadore Quinn</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Sam -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Sam">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <rdfs:comment>From TV series steps grafitti (Does not contradict canon)  egging on stairs racers.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -1681,12 +1885,28 @@ His hair was long, wild, and seemingly built for flying up and down the staircas
     
 
 
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Scottie -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Scottie">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Second_Tier_of_Apartments -->
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Second_Tier_of_Apartments">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
         <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel17"/>
         <rdfs:comment>Entered the second tier of apartments, down below the 16th floor.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Shadow -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Shadow">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo_Concept"/>
     </owl:NamedIndividual>
     
 
@@ -1721,6 +1941,7 @@ His hair was long, wild, and seemingly built for flying up and down the staircas
         <memberOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel140"/>
         <hasAge>Adult</hasAge>
         <hasRole>Mechanic (Marck&apos;s wife)</hasRole>
+        <hasRole rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2nd shift</hasRole>
         <hasSex>Female</hasSex>
         <hasStatus>Alive</hasStatus>
         <rdfs:label>Shirly</rdfs:label>
@@ -2179,6 +2400,7 @@ His hair was long, wild, and seemingly built for flying up and down the staircas
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel130">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#DownDeep"/>
         <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
         <rdfs:label>Silo Level 130</rdfs:label>
     </owl:NamedIndividual>
@@ -3027,7 +3249,7 @@ His hair was long, wild, and seemingly built for flying up and down the staircas
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel82">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel"/>
         <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo"/>
-        <rdfs:comment>Clear path down to 99: prefrerred location for suicide jumpers.</rdfs:comment>
+        <rdfs:comment>Clear path down to 99: preferered location for suicide jumpers.</rdfs:comment>
         <rdfs:label>Silo Level 82</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3239,6 +3461,18 @@ His hair was long, wild, and seemingly built for flying up and down the staircas
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Small_Water_Treatment_Plant">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel38"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Solo -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Solo">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Person"/>
+        <hasGivenName>Jimmy</hasGivenName>
+        <hasSex>male</hasSex>
+        <hasSurname>Solo</hasSurname>
     </owl:NamedIndividual>
     
 
@@ -3325,7 +3559,47 @@ His hair was long, wild, and seemingly built for flying up and down the staircas
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#The_Pact">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo_Concept"/>
-        <rdfs:comment>The Pact</rdfs:comment>
+        <rdfs:comment>The Pact
+
+this is from the TV Props for example designed by Philippa Broadhurst as they don&apos;t contradict canon:
+
+Cover Title
+THE PACT
+BETWEEN
+THE FOUNDERS
+AND
+THE CITIZENS
+OF THE SILO
+
+
+Contents Page
+SECTION 1. The 13 Articles of Commitment ...................... 3
+SECTION 2. Public Safety Statutes ................................... 7
+SECTION 3. Public Rights and Responsibilities ................ 12
+SECTION 4. Resource Management ................................ 16
+SECTION 5. Public Health &amp; Procreation .......................... 20
+SECTION 6. Education of Children ................................... 31
+SECTION 7. Residential Management ............................... 37
+SECTION 8. Public Recreation .......................................... 51
+SECTION 9. Freedom of Worship .................................... 67
+SECTION 10. Mechanization ............................................. 72
+SECTION 11. The Structure of Government ...................... 74
+SECTION 12. The Office of The Mayor .............................. 77
+SECTION 13. Justice ......................................................... 89
+SECTION 14. Law Enforcement ....................................... 97
+SECTION 15. Information Technology .............................. 104
+SECTION 16. Power System ............................................. 124
+SECTION 17. Administration ........................................... 132
+SECTION 18. Library ......................................................... 144
+SECTION 19. Security ...................................................... 151
+SECTION 20. Distribution ................................................. 156
+SECTION 21. Agriculture ................................................. 160
+SECTION 22. Recycle, Re-purpose &amp; Repair ..................... 162
+SECTION 23. Property ..................................................... 182
+SECTION 24. Mechanical ................................................. 195
+
+We don&apos;t knopw if there are more contents pages</rdfs:comment>
+        <rdfs:label>The Pact</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3352,6 +3626,14 @@ Books: The Starcase is metal and is a tight spiral.  The landings are not at reg
     
 
 
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#The_Syndrome -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#The_Syndrome">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo_Concept"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#The_Vault -->
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#The_Vault">
@@ -3365,6 +3647,19 @@ Books: The Starcase is metal and is a tight spiral.  The landings are not at reg
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Up_Top">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo_Concept"/>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:comment>aka &apos;The Top 48&apos;</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Upper_Dirt_Farm -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Upper_Dirt_Farm">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Location"/>
+        <partOf rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#SiloLevel09"/>
+        <rdfs:comment>Coroner works at the dirt farm</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3398,7 +3693,7 @@ Books: The Starcase is metal and is a tight spiral.  The landings are not at reg
         <hasStatus>Alive</hasStatus>
         <WoolAggregated:has_nickname>Walk</WoolAggregated:has_nickname>
         <rdfs:comment>TV Difference: Walk is a woman</rdfs:comment>
-        <rdfs:label>Walker (Walk)</rdfs:label>
+        <rdfs:label>Walker</rdfs:label>
         <extractedSentence>Known as &apos;Walk,&apos; an older man in Electrical who rarely leaves his shop. (Sections 13–14)</extractedSentence>
     </owl:NamedIndividual>
     
@@ -3417,6 +3712,15 @@ Books: The Starcase is metal and is a tight spiral.  The landings are not at reg
 
     <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Wills">
         <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo_Concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Wire -->
+
+    <owl:NamedIndividual rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Wire">
+        <rdf:type rdf:resource="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Silo_Concept"/>
+        <rdfs:comment>Wiring someone: sending an electronic  message.  it costs quarter of a chit per character.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -3448,18 +3752,26 @@ Books: The Starcase is metal and is a tight spiral.  The landings are not at reg
 
     <rdf:Description rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#ID_Cards">
         <rdfs:comment>ID cards
-Cards coloured blue for mechanical
+Blue coloured for mechanical
 Gold coloured for Shriffs Deputy and the Mayor</rdfs:comment>
+        <rdfs:label>ID Cards</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Meal_Cards">
         <rdfs:comment>A few expired meal cards lay underneath</rdfs:comment>
+        <rdfs:label>Meal Cards</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Overalls">
-        <rdfs:comment>Blue overalls for Mechanicals
-IT wear red overalls
+        <rdfs:comment>Blue for Mechanicals
+Red for IT - or is itr Silver?
+Yellow for Supply
 
 Grey Overalls?
-Sims, the head of IT security, similarly laid into three men in gray overalls</rdfs:comment>
+Sims, the head of IT security, similarly laid into three men in gray overalls
+
+Silver Overalls:
+When Juliette gos do to see Scottie, she assaults a guard in silver overalls?
+
+....passing by a man and woman in IT silver as they walked the other way.....</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://www.turbotas.co.uk/WoolOntology/Wool.rdf#Wills">
         <rdfs:comment>Wills

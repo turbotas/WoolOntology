@@ -1,6 +1,6 @@
 ﻿# Wool Ontology Project
 
-This repository contains an **RDF ontology** capturing characters, locations, events, and items from Hugh Howey’s *Wool* series. **Be warned**: The files here include **significant spoilers** for the *Wool* **books**, which also deviates significantly from the events of the Apple TV "Silo" Series.  
+This repository contains an **RDF ontology** capturing characters, locations, events, and items from Hugh Howey’s *Wool* series. **Be warned**: The files here include **significant spoilers** for the *Wool* **books**, which also deviates significantly from the events of the Apple TV "Silo" Series. 
 
 ## Purpose of This Project
 
@@ -46,6 +46,9 @@ If you’d like to add more details or refine the ontology:
 2. Make your changes in a branch,  
 3. Submit a pull request.
 
-We welcome corrections and expansions—just remember to keep the scope focused on the *Wool* books. If referencing the TV adaptation, please do so in separate RDF files to avoid mixing details. There is an **extractedSentence** field to include the context from the book: please do not put anything more than a tiny snippet of the book here - we don't want to go beyond fair use.  Please buy the book - it's a classic dystopian future work, thanks Hugh!
+We welcome corrections and expansions—just remember to keep the scope focused on the *Wool* books.
+If referencing the TV adaptation or even fanfic, please make sure the origin is clear to avoid mixing details. There is an **extractedSentence** field to include the context from the book: please do not put anything more than a tiny snippet of the book here - we don't want to go beyond fair use.  Please buy the book - it's a classic dystopian future work, thanks Hugh!
+
+**Canon** - We consider the books to be canon, but it's great to enrich this work with details from the TV series or even fan fiction where the details don't contradict.  As example of this: in this work we describe the stairs and stairwell as they appear in the books as the TV series differs considerably.  But where there are details from the Pact that appear in the TV series but are not in the books, we include them here to enrich the work. Same with Fan Fiction as long as it doesn't contract either the books or the TV Series then why not include it?
 
 **Thanks for exploring the Wool Ontology Project!** Feel free to open an issue or pull request with questions or enhancements.
