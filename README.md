@@ -1,10 +1,10 @@
 ﻿# Wool Ontology Project
 
-This repository contains an **RDF ontology** capturing characters, locations, events, and items from Hugh Howey’s *Wool* series. **Be warned**: The files here include **significant spoilers** for the *Wool* **books**, which also deviates significantly from the events of the Apple TV "Silo" Series. 
+This repository contains an **RDF ontology** that captures the characters, locations, events, and items of Hugh Howey’s *Wool* series. Please note: The files include significant spoilers for the *Wool* books and differ from the Apple TV adaptation, *Silo*. 
 
 ## Purpose of This Project
 
-- **World-Building**: Provide a structured knowledge model (ontology) of *Wool* so fans can browse relationships among characters and locations, or build applications on top of this data.  
+- **World-Building**: Provides a structured knowledge model (ontology) of *Wool*, allowing fans to explore relationships among characters and locations, and easily build applications with this rich data.  
 - **Semantic Web Exploration**: Demonstrate how RDF can be used to capture a fictional universe for educational or fandom purposes.  
 - **Collaboration**: Allow contributors to expand or refine the ontology as they parse more chapters or discover new details.
 
@@ -12,7 +12,7 @@ This repository contains an **RDF ontology** capturing characters, locations, ev
 
 All ontology data is stored in **Resource Description Framework** (`.rdf`) format.
 
-- **`Wool.rdf`** – The main file defining classes, properties, individuals, and annotations.  
+- **[`Wool.rdf`](./Wool.rdf)** – The main file defining classes, properties, individuals, and annotations.  
 - Additional `.rdf` files may be present for different sections/chapters (none published so far).
 
 ## How to View / Edit
@@ -23,10 +23,9 @@ You can open or edit the `.rdf` files in any text editor, but for a more semanti
    - Download from [https://protege.stanford.edu/](https://protege.stanford.edu/)  
    - File → Open → select your `.rdf` file.  
    - Configure “Show imported ontologies” if relevant.
-   - You can also open the file in Protege direct using the URL https://raw.githubusercontent.com/turbotas/WoolOntology/refs/heads/main/Wool.rdf but obviously no edits will be saved!
+   - You can also open the file directly in Protégé using the URL [Wool.rdf](https://raw.githubusercontent.com/turbotas/WoolOntology/refs/heads/main/Wool.rdf). Note that edits made in this mode will not be saved.
 
-2. **Visual RDF Tools** – E.g., **VOWL** or **GraphDB**.  
-   - Some let you visualize classes/properties as a graph.
+2. **Visual RDF Tools** – Tools such as [VOWL](http://vowl.visualdataweb.org/webvowl.html) or [GraphDB](https://www.ontotext.com/products/graphdb/) can be used to visualize classes and properties as an interactive graph.
 
 3. **Command-Line Tools** – If you prefer the console, you can use `riot` (Apache Jena) or `rapper` (Raptor) to parse/validate the Turtle.
 
@@ -39,16 +38,24 @@ You can open or edit the `.rdf` files in any text editor, but for a more semanti
 
 ---
 
-### Contributing
+## Contributing
 
 If you’d like to add more details or refine the ontology:
 1. Fork this repo,  
 2. Make your changes in a branch,  
 3. Submit a pull request.
 
-We welcome corrections and expansions—just remember to keep the scope focused on the *Wool* books.
-If referencing the TV adaptation or even fanfic, please make sure the origin is clear to avoid mixing details. There is an **extractedSentence** field to include the context from the book: please do not put anything more than a tiny snippet of the book here - we don't want to go beyond fair use.  Please buy the book - it's a classic dystopian future work, thanks Hugh!
+We welcome contributions and corrections; please maintain focus on the original *Wool* books. If referencing details from the TV adaptation or fan fiction, clearly indicate the source to avoid confusion. Use the `extractedSentence` field to include a brief snippet from the book for context—please keep it minimal to adhere to fair use guidelines. If you enjoy the series, please consider purchasing the book; it is a classic dystopian masterpiece.
 
-**Canon** - We consider the books to be canon, but it's great to enrich this work with details from the TV series or even fan fiction where the details don't contradict.  As example of this: in this work we describe the stairs and stairwell as they appear in the books as the TV series differs considerably.  But where there are details from the Pact that appear in the TV series but are not in the books, we include them here to enrich the work. Same with Fan Fiction as long as it doesn't contract either the books or the TV Series then why not include it?
+**Canon:** We consider the books to be canon. However, it is valuable to enrich this work with details from the TV series or even fan fiction, provided they do not contradict the original narrative. For example, while this project describes stairs and stairwells as depicted in the books, the TV series presents them differently. Additional context from other sources may be included if it enhances the primary narrative.
 
-**Thanks for exploring the Wool Ontology Project!** Feel free to open an issue or pull request with questions or enhancements.
+**Thanks for exploring the Wool Ontology Project!** Feel free to open an [issue](https://github.com/turbotas/WoolOntology/issues) or [pull request](https://github.com/turbotas/WoolOntology/pulls) with questions or enhancements.
+
+## Examples
+
+Below is an example command using Apache Jena's riot tool to validate your RDF file:
+
+```bash
+riot Wool.rdf
+```
+
